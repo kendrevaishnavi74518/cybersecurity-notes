@@ -104,8 +104,8 @@
 ## Basic Cloud Terminology
 - EC2 (Virtual Computer / Server): EC2 represents a virtual computer in the cloud. Just like a real computer, it has a CPU and memory (RAM) and can run applications. Whenever we add an EC2 instance, we are adding a computer to your environment.
 - Instance Type (for example: t2, t3, m5): Instance types describe how powerful the virtual computer is. Some have more CPU and RAM and are therefore more expensive. We choose it based on our needs, keeping in mind that:
-Bigger instances = more power + higher cost
-Minor instances = less power + lower cost
+- Bigger instances = more power + higher cost
+- Minor instances = less power + lower cost
 
 
 
