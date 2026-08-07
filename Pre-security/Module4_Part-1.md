@@ -53,3 +53,21 @@
 
 - UTF-16 uses either 2 or 4 bytes per character, common characters, like most Latin, Cyrillic, or Chinese Hanzi, fit in 2 bytes; Rarer ones, like emoji or ancient scripts, require a pair, i.e., two 16-bit units totaling 4 bytes.
 - UTF-32 is the simplest but also the most wasteful; every Unicode code point uses exactly 4 bytes. 
+
+### Python Basics
+
+- Python offers the random.randint() method, that returns a random integer wihin specified range/bounds.
+- It also has the int() method, used to convert text to integer.
+<br>
+
+## Conditional Statements
+- if checks the first condition.
+- If the if condition is false, Python checks the elif condition(s) one by one.
+- If none of the if or elif conditions are true, the else block is executed.
+<br>
+
+## Iterations
+- Allows us to execute same lines of code multiple times.
+- A while loop repeats a block of code as long as the condition is true.
+- Before each repetition, Python checks the condition again.
+- When the condition becomes false, the loop stops.
