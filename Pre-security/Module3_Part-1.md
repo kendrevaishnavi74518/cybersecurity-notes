@@ -127,3 +127,44 @@ Key Terminology:
 - Private: Intended for trusted networks like home or lab environment.
 - Public: Used for untrusted networks, such as public WiFi.
 
+## Linux CLI Basics
+
+- Terminal is a text based interface where user, types commands to access files & floders, instead of clicking icons.
+- It is used in cybersecurity because:
+     1. It is faster than clicking around.
+     2. Gives more control.
+     3. Most of security tools run only in terminal.
+
+## Linux Commands
+<br>
+
+1. pwd - Tells which part of the system, we are working in.(print working directory)
+2. ls - Lists all files & folders, inside a directory.
+     - ls -l: Used to get more details of contents.
+     - ls -al: Used to display all hidden files, present in directory.
+3. cd <directory_name> - Used to navigate to a directory.
+    - cd.. - Used to go one step/level back.
+4. find - Used to locate files.
+   - Syntax: find ~ -name <file_name>.
+   - ~ signifies home directory
+   - If file exists, Linux prints full path.
+5. cat - Used to read contents of a file.
+    - Syntax: cat file_name
+6. whoami - Prints cuurent username.
+7. uname -a: Prints details of OS, kernel version & architecture.
+    - Ex: Linux tryhackme 6.14.0-1018-aws #17-Ubuntu SMP Mon Sep  2 13:48:07 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+    <br>
+
+    Breakdown of the info:
+    - Linux: System is running Linux kernel.
+    - tryhackme - Computer's name.
+    - 6.14.0-1018-aws: Kernel version installed on computer.
+    - x86_64 - Hardware platform(64 bits)
+    - GNU/Linux - OS type (Linux kernel + GNU tools)
+8. df -h: Generates report of disk usage or available space.(-h: human readable).
+    - Output breakdown:
+       - /dev/root - Main disk of the system, shows free, available & used disk space.
+       - tmpfs - These are entries temporarily stored on RAM, not on physical disk.
+       - /dev/shm - Shared memory
+       - /run/user/114 - similar to temporary storage for system user.
+9. /etc directory - Stores configuration & informational files. Ex: OS release,etc.
