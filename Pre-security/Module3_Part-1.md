@@ -134,6 +134,7 @@ Key Terminology:
      1. It is faster than clicking around.
      2. Gives more control.
      3. Most of security tools run only in terminal.
+- The accounts **root** and **administrator** have complete unrestricted access to a system.
 
 ## Linux Commands
 <br>
@@ -168,3 +169,7 @@ Key Terminology:
        - /dev/shm - Shared memory
        - /run/user/114 - similar to temporary storage for system user.
 9. /etc directory - Stores configuration & informational files. Ex: OS release,etc.
+10. ssh USERNAME@MACHINE_IP - Used to securely connect to and remotely control another computer over a network.
+     - In SSH, we don't see the password when typing it, but the system still receives it.
+11. history - Prints commands used by user.
+12. su - root: Used to switch to the root directory.
