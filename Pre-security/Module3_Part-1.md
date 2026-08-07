@@ -3,9 +3,9 @@
 - An operating system (OS) is the core software that coordinates everything happening on a computer. 
 ```mermaid
 graph TD
-A[User] -> B[Applications]
-B[Applications] -> C[Operating System]
-C[Operating System] -> D[Hardware]
+A[User] --> B[Applications]
+B[Applications] --> C[Operating System]
+C[Operating System] --> D[Hardware]
 ```
 ## System Privilege Layers
 
@@ -82,3 +82,48 @@ Alpine Linux, Bottlerocket AWS, Flatcar Linux
 <br>
 
 - Different devices have different requirements, so they need different operating systems. Each OS is designed for specific goals such as ease of use, security, performance, stability, or power efficiency.
+<br>
+
+## Windows Basics
+
+- Early computers ran MS-DOS, which showed black screen where user typed commands instead of clicking icons.
+- 1985: Miscrosoft launched Windows 1.0, a basic GUI built on top of DOS.
+<br>
+
+- Account types:
+1. Guest: Restricted account for temporary access, doesn't have ability to change system settings.
+2. Standard: A normal user account for performing everyday activities, can change system settings(personal), doesn't have access to system wide changes.
+3. Administrator: Has complete access of the system, including software installation,user management & configuration.
+<br>
+
+Key Terminology:
+   - Desktop: The main workspace where files, folders, and shortcuts live
+   - Taskbar: A control strip that provides access to applications, tools, settings, and notifications.
+   - Start Menu: The primary way to access applications, settings, and power options, signified by the Windows logo
+   - Search: A quick access method of locating applications, settings, and files by entering search terms.
+   - File Explorer: The built-in Windows tool to browse, manage, and organize files and folders.
+   - Windows Update: A built-in update tool that helps keep your OS, native apps, and security features up to date.
+   - Microsoft Store: The native Windows application for installing trusted applications.
+   - Windows Settings: A centralized location for configuring system, device, personalization, and security settings.
+   - Control Panel: The legacy management interface that provides access to system configuration options
+   - Task Manager: A Windows tool for monitoring what is happening on your system in real time.
+
+## Windows Security
+
+- Windows Security is the central dashboard for managing Windows using built-in protection measures.
+- Divided in 4 sections:
+    1. Virus & threat protection: Detects malicious software using customizable scans & real-time protection.
+    2. Firewall & Network protection: Monitors incoming & outgoing network traffic to help prevent unauthorized access.
+    3. App & browser control: Protects user from accessing unsafe websites, files, apps,etc.
+    4. Device Security: Protects the system by providing hardware based protection, making it secure.
+
+<br>
+
+- Windows Firewall is a built-in firewall, that monitors the network traffic using a set of predefined security rules tha tdetermine whether connections are allowed or denied.
+- It operates on different profiles, allowing users to create customs rules or specify what it can access.
+<br>
+
+- Domain: When a system is connected to a organizations domain network.
+- Private: Intended for trusted networks like home or lab environment.
+- Public: Used for untrusted networks, such as public WiFi.
+
