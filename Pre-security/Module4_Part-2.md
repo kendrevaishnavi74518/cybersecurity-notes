@@ -13,3 +13,18 @@
    - If all conditions are false, else runs.
 - while = Check condition → run code → check again → stop when false.
 - Not equal to is written as '!==' in Javascript.
+<br>
+
+## Database SQL Basics
+- Database is a place where a computer stores info, in an organised manner.
+- Inside a database info is stored in tables that consists of rows(record) & columns.
+
+## Queries
+1. SELECT * FROM table_name; - Returns all entries present in the specified table.
+    - SELECT COLUMN1,COLUMN2 FROM table_name; - Returns only the specified columns from the table.
+    - SELECT * FROM table_name WHERE (condition); - The 'WHERE' keyword filters rows & keeps only rows that match the condition.
+    - SELECT * FROM table_name ORDER BY column; - The ORDER BY keyword sorts results by a column. By default, results are sorted in ascending order.
+    - SELECT * FROM table_name ORDER BY column DESC; - To sort in reverse order, add DESC.
+    
+
+
