@@ -6,7 +6,7 @@
 ## Core Terms
 1. Red Teaming: A structured, authorized attack methodology that simulates a real attacker to test effectiveness of defenses & find vulnerabilities.
 2. Penetration Test: A structured security assessment where authorized tester attempts to identify & exploit vulnerabilities to understand real-world risk.
-3. Vulnerability: Weakness or flaw in a sysytem,configuration that an attacker could abuse.
+3. Vulnerability: Weakness or flaw in a sytem,configuration that an attacker could abuse.
 4. Exploit: Technique or method used to take advantage of vulnerability to achieve specific outcome.
 5. Scope: Boundaries of what is allowed to be tested during engagement. It defines which systems,apps & actions are permitted & what is off-limits.
 6. Enumeration: Collecting details about system,users and services to find weak points.
