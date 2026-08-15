@@ -26,8 +26,8 @@ Cybersecurity protects the systems,networks, & applications from attacks.
 3. Key - Secret component that controls how scrambling & unscrambling works.
 4. Algorithm - Set of steps that explain how to usethe key on the message. Security comes from keeping the key secret.
 
-**Encryption Process = Plaintext + encryption key --> Ciphertext**
-**Decryption Process = Ciphertext + decryption key --> Plaintext**
+- **Encryption Process = Plaintext + encryption key --> Ciphertext**
+- **Decryption Process = Ciphertext + decryption key --> Plaintext**
 
 ## Symmetric Encryption — Lockbox Analogy
 
