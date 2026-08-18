@@ -50,3 +50,46 @@ r = read, w = write, x = execute
 2. /var - Short for variable, it is one of the main root folders found on Linux install. It stores data that is frequently accessed or written by services & apps are written here(/var/log),or other data that is not necessarily associated with a specific user (i.e databases).
 3. /root - Actually home for the "root" system user.
 4. /tmp - Unique folder found in Linux install, short for "temporary", it is volatile & is used to store data that is needed to be accessed once or twice. Once computer is restarted,contents of this folder are cleared out.
+
+## Terminal Text Editors
+1. nano - To create file using nano, use **nano filename**.
+Press enter to start new line, up - down arrow key to navigate, Ctrl + O = save, Ctrl + X = exit.
+2. VIM - Much more advanced text editor.Provides benefits such as Customisable,syntax highlighting, works on all terminals where nano may not be installed.
+
+## TRansferring files from host - SCP(SSH)
+Secure Copy or SCP, is just a means of securely copying files. It allows to transfer files between two computers using SSH protocol to provide both authentication & encryption.
+- Syntax: scp filename user@machine_ip name that we wish to store file as on system
+
+## Serving Files From Host - WEB
+Ubuntu machines come pre-packaged with python3. It helps provide a lightweight & easy-to-use module "HTTPServer". This module turns the computer into a quick & easy web server, we can use to serve our own files, where they can be downloaded by another computing using commands such as curl & wget.
+- Syntax: python3 -m http.server
+     - wget http://machineip:port/filename (Open new terminal for this command)
+     - Ctrl + C is to stop the server module.
+
+## Processes
+Processes are the programs running on the machine. They are managed by kernel,where each process will have an associated ID, PID. It increments for the order in which the process starts.
+
+1. ps - Provides list of currently running processes as user's session & some additional info such as status code, session that is runnin it, usage time of CPU, name of actual program being executed.
+2. ps aux - To see processes run by other users & that don't run from a session.
+3. top - Gives real-time statistics about processes running on the system. These refresh every 10s, also when we use arrow keys to browse various rows.
+#### Managing Processes
+There are a variety of types of signals that correlate to exactly how "cleanly" the process is dealt with by kernel. To kill a command, we use kill PID
+- Some signals that can be sent to process when it is killed:
+     - SIGTERM - Kill the process, but allow it to do some cleanup tasks beforehand.
+     - SIGKILL - Kill process, doesn't do any cleanup after the fact.
+     - SIGSTOP - Stop/suspend a process
+
+#### How Processes Start?
+OS uses namespaces to ultimately split up resources available on computer to processes. Namespaces are great for security as it is a way of isolating processes from another, only those in same namespace will be able to see each other.
+- Process with ID 0 is a process that started when system boots, this process is the system's init on Ubuntu, such as systemd, used to provide a way of manging user's processes & sits between OS and user.
+
+#### Starting Processes/Services on Boot
+1. systemctl - Allows to interact with systemd process/daemon. It is easy to use command, syntax: systemctl [option] [service]. Ex: systemctl start apache2.
+    - We have 5 different options: start,stop,enable,disable,status
+
+### Backgrounding & Foregrounding
+Processes can run in 2 states: background & foreground.
+- Ctrl + Z is used to background a process, it is also an effective way of pausing the execution of a script or command.
+#### Foregrounding a process
+With our process backgrounded using either Ctrl + Z or the & operator, we can use fg to bring this back to focus.
+
