@@ -15,62 +15,64 @@ Toolbars
 Notification Area
 1. Desktop
 The Desktop provides quick access to shortcuts, programs, folders, and files.
-Items can be organized into folders or arranged as desired.
-Right-clicking the desktop opens a context menu for:
-Changing icon size and arrangement
-Copying/pasting items
-Creating folders, shortcuts, and text documents
-Display Settings allows you to change:
-Screen resolution
-Screen orientation
-Multi-monitor configuration
-Personalize allows you to change:
-Desktop wallpaper
-Fonts
-Themes
-Color schemes
-Some display options may be disabled during a Remote Desktop session.
+- Items can be organized into folders or arranged as desired.
+- Right-clicking the desktop opens a context menu for:
+    - Changing icon size and arrangement
+    - Copying/pasting items
+    - Creating folders, shortcuts, and text documents
+
+- Display Settings allows you to change:
+   - Screen resolution & orientation
+   - Multi-monitor configuration
+
+- Personalize allows you to change:
+   - Desktop wallpaper
+   - Fonts
+   - Themes
+   - Color schemes
+
+- Some display options may be disabled during a Remote Desktop session.
+
 2. Start Menu
-The Start Menu provides access to installed applications, files, settings, and utilities.
-It can be opened by clicking the Windows logo.
-Main Sections
+The Start Menu provides access to installed applications, files, settings, and utilities.It can be opened by clicking the Windows logo.
+
+#### Main Sections
 
 1. Account and System Options
-
-User account settings
-Documents and Pictures folders
-Settings
-Lock, sign out, restart, or shut down
-Remote Desktop disconnect option
+  - User account settings
+  - Documents and Pictures folders
+  - Settings
+  - Lock, sign out, restart, or shut down
+  - Remote Desktop disconnect option
 
 2. Applications List
-
-Shows recently added applications.
-Displays installed applications in alphabetical order.
-Clicking a letter opens an alphabet grid for quick navigation.
+   - Shows recently added applications.
+   - Displays installed applications in alphabetical order.
+   - Clicking a letter opens an alphabet grid for quick navigation.
 
 3. Tiles
+- Provides shortcuts to frequently used applications and utilities.
+- Right-clicking a tile allows actions such as:
+- Resize
+- Unpin from Start
+- View properties
+- Applications can be added using Pin to Start.
 
-Provides shortcuts to frequently used applications and utilities.
-Right-clicking a tile allows actions such as:
-Resize
-Unpin from Start
-View properties
-Applications can be added using Pin to Start.
 3. Search Box (Cortana)
 Used to quickly search for applications, files, settings, and other information on the system.
 4. Task View
 Allows users to view and switch between open applications and windows.
 It also supports managing multiple virtual desktops.
 5. Taskbar
-Located at the bottom of the Windows desktop by default.
-Displays currently open applications, folders, and files.
-Pinned applications remain on the taskbar even when closed.
-Hovering over an application icon displays a preview thumbnail and tooltip.
-Right-clicking the taskbar provides options to customize its components and settings.
+- Located at the bottom of the Windows desktop by default.
+- Displays currently open applications, folders, and files.
+- Pinned applications remain on the taskbar even when closed.
+- Hovering over an application icon displays a preview thumbnail and tooltip.
+- Right-clicking the taskbar provides options to customize its components and settings.
+
 6. Toolbars
-Toolbars provide quick access to frequently used applications, folders, or commands.
-They can be enabled or disabled through the taskbar's context menu.
+Toolbars provide quick access to frequently used applications, folders, or commands.They can be enabled or disabled through the taskbar's context menu.
+
 7. Notification Area
    - Usually located at the bottom-right corner of the screen.
    - Displays the date and time.
