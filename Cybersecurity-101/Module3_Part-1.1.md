@@ -1,105 +1,149 @@
-## Windows Fundamentals 1 (contd)
-The Windows folder ( C:\Windows ) is traditionally known as the folder which contains the Windows OS. The folder doesn't have to reside in the C drive necessarily. It can reside in any other drive and technically can reside in a different folder.**The system  environment variable for the Windows directory is %windir%**.
+## Windows Fundamentals
 
-- Environment variables store information about the OS environment. This information includes details such as the operating system path, the number of processors used by the operating system, and the location of temporary folders. One of the folders is System32.
+### The Desktop(GUI)
+Windows Desktop, the graphical user interface(GUI), is the screen that welcomes user once they log into a Windows machine.
+- The login screen is user enters the valid credentials, username & password of pre-existing windows account on the system or Active Directory environment(if it is domain joined machine).
 
-- The System32 folder holds the important files that are critical for the operating system.Accidentally deleting any files or folders within System32 can render the Windows OS inoperational.
+Windows GUI consists of several components that make navigation and system management easier:
 
-### User Accounts, Profiles & Permissions
-User accounts can be of 2 types on a typical local windows system: **Administrator** & **Standard User.**
+Desktop
+Start Menu
+Search Box (Cortana)
+Task View
+Taskbar
+Toolbars
+Notification Area
+1. Desktop
+The Desktop provides quick access to shortcuts, programs, folders, and files.
+- Items can be organized into folders or arranged as desired.
+- Right-clicking the desktop opens a context menu for:
+    - Changing icon size and arrangement
+    - Copying/pasting items
+    - Creating folders, shortcuts, and text documents
 
-- An Administrator can make changes to system: add & delete users,modify groups,modify settings on the system,etc.
-- A Standard User can only make changes to folders/files attributed to the user & can't perform system-level changes, such as install programs.
+- Display Settings allows you to change:
+   - Screen resolution & orientation
+   - Multi-monitor configuration
 
-## Windows User Accounts and Groups
+- Personalize allows you to change:
+   - Desktop wallpaper
+   - Fonts
+   - Themes
+   - Color schemes
 
-### User Accounts
-* The **Administrator** can view and manage user accounts on the system.
-* To view accounts:
+- Some display options may be disabled during a Remote Desktop session.
 
-  1. Open the **Start Menu**.
-  2. Search for **Other User**.
-  3. Open **System Settings → Other users**.
-* An Administrator can select a local account and:
-  * **Change account type**
-  * **Remove** the account
-  * **Add someone else to this PC**
-* A **Standard User** does not have the option to add another user to the PC.
+2. Start Menu
+The Start Menu provides access to installed applications, files, settings, and utilities.It can be opened by clicking the Windows logo.
 
-## User Profiles
-* When a user account is created, a **user profile** is created when the user logs in for the first time.
-* User profiles are stored under:
-  `C:\Users`
-* Example:
-  `C:\Users\Max`
-* The **User Profile Service** creates the profile during the user's first login.
-* Common folders in a user profile include:
-  * **Desktop**
-  * **Documents**
-  * **Downloads**
-  * **Music**
-  * **Pictures**
+#### Main Sections
 
-## Local Users and Groups
-* Windows provides **Local Users and Groups Management** to manage local accounts and groups.
-* Open it by:
-  1. Right-click **Start Menu**.
-  2. Select **Run**.
-  3. Type `lusrmgr.msc`
-* It contains two main sections:
-  * **Users** – Lists local user accounts.
-  * **Groups** – Lists local groups and their descriptions.
+1. Account and System Options
+  - User account settings
+  - Documents and Pictures folders
+  - Settings
+  - Lock, sign out, restart, or shut down
+  - Remote Desktop disconnect option
 
-## Groups and Permissions
-* Groups have specific **permissions** assigned to them.
-* Administrators can add users to groups.
-* A user **inherits the permissions** of the groups they belong to.
-* A user can belong to **multiple groups**.
+2. Applications List
+   - Shows recently added applications.
+   - Displays installed applications in alphabetical order.
+   - Clicking a letter opens an alphabet grid for quick navigation.
+
+3. Tiles
+- Provides shortcuts to frequently used applications and utilities.
+- Right-clicking a tile allows actions such as:
+- Resize
+- Unpin from Start
+- View properties
+- Applications can be added using Pin to Start.
+
+3. Search Box (Cortana)
+Used to quickly search for applications, files, settings, and other information on the system.
+4. Task View
+Allows users to view and switch between open applications and windows.
+It also supports managing multiple virtual desktops.
+5. Taskbar
+- Located at the bottom of the Windows desktop by default.
+- Displays currently open applications, folders, and files.
+- Pinned applications remain on the taskbar even when closed.
+- Hovering over an application icon displays a preview thumbnail and tooltip.
+- Right-clicking the taskbar provides options to customize its components and settings.
+
+6. Toolbars
+Toolbars provide quick access to frequently used applications, folders, or commands.They can be enabled or disabled through the taskbar's context menu.
+
+7. Notification Area
+   - Usually located at the bottom-right corner of the screen.
+   - Displays the date and time.
+- May also contain icons for:
+   - Volume
+   - Network/Wi-Fi
+   - Other system services
+- Icons can be added or removed through Taskbar Settings → Notification Area.
+
+Key Tip
+
+Right-clicking a folder, file, application, or icon generally provides additional information and useful actions related to that item.
+
+# Windows File System – NTFS
+
+## NTFS (New Technology File System)
+
+* **NTFS** is the primary file system used by modern versions of Windows.
+* Older Windows file systems include:
+
+  * **FAT16/FAT32** – File Allocation Table
+  * **HPFS** – High Performance File System
+* FAT is still commonly used in **USB drives and MicroSD cards**, but generally not for Windows system installations.
+
+## Features of NTFS
+
+NTFS is a **journaling file system**, meaning it keeps information in a log that helps automatically recover and repair the file system after a failure.
+
+NTFS provides several advantages over older file systems:
+
+* Supports **files larger than 4 GB**
+* Allows specific **permissions** on files and folders
+* Supports **file and folder compression**
+* Supports **encryption** using **EFS (Encrypting File System)**
+
+The file system of the Windows installation can usually be checked by right-clicking the **C: drive → Properties**.
+
+## NTFS Permissions
+
+NTFS allows administrators to **grant or deny access** to files and folders.
+
+The main permissions are:
+
+* **Full Control** – Complete access to the file/folder
+* **Modify** – Allows modification and deletion
+* **Read & Execute** – Read and run files/programs
+* **List Folder Contents** – View contents of a folder
+* **Read** – View files and folder contents
+* **Write** – Create or modify files
+
+### Viewing Permissions
+
+1. Right-click the required file or folder.
+2. Select **Properties**.
+3. Open the **Security** tab.
+4. Select a user, computer, or group to view its permissions.
+
+## Alternate Data Streams (ADS)
+
+* **ADS (Alternate Data Streams)** is a feature specific to **NTFS**.
+* Every file has at least one data stream called **`$DATA`**.
+* ADS allows a file to contain **additional streams of data**.
+* Windows File Explorer normally does not display ADS.
+* **PowerShell** and third-party tools can be used to view ADS.
+* From a security perspective, **malware can use ADS to hide data**.
+* ADS also has legitimate uses. For example, files downloaded from the Internet may contain information in ADS identifying their Internet origin.
 
 ### Key Points
-* User profiles are stored in **`C:\Users`**.
-* `lusrmgr.msc` opens **Local Users and Groups**.
-* **Groups simplify permission management**.
-* Users inherit permissions from their assigned groups.
-* Administrators have greater control over user accounts and groups.
 
-## User Account Control (UAC)
-
-### What is UAC?
-* **User Account Control (UAC)** is a Windows security feature designed to protect systems from unauthorized changes.
-* It was introduced with **Windows Vista** and continued in later Windows versions.
-* Many home users operate with administrator accounts, which can increase security risks if malware infects the system.
-
-### Why is UAC Important?
-* Administrator accounts have permission to make significant changes to the system.
-* Normal activities such as:
-  * Browsing the Internet
-  * Creating/editing Word documents
-  * Running everyday applications
-    do not require elevated privileges.
-* Running everything with administrator privileges increases the potential impact of malware.
-* If malware runs under an administrator's elevated context, it may be able to make changes to the system.
-
-### How UAC Works
-* When an administrator logs in, the Windows session **does not normally run with elevated privileges by default**.
-* When an operation requires higher privileges, **UAC prompts the user for confirmation**.
-* Depending on the account and configuration, the user may need to provide administrator credentials.
-* The operation proceeds only after the required authorization is provided.
-
-**Note:** By default, UAC does not apply to the built-in local Administrator account in the same way it does to other administrator accounts.
-
-### UAC Shield Icon
-* Programs that require elevated privileges may display a **shield icon** on their application icon.
-* The shield indicates that **UAC will prompt for elevated privileges** when the program is launched.
-
-### UAC Prompt
-* When a standard user attempts to run a program requiring administrator privileges:
-  1. Windows displays a **UAC prompt**.
-  2. Administrator credentials may be requested.
-  3. The program runs only after valid authorization is provided.
-* If the required password is not entered, the prompt eventually disappears and the operation does not proceed.
-
-### Security Benefit
-UAC helps reduce the risk of malware successfully compromising a Windows system by preventing applications from automatically performing actions that require elevated privileges.
-
-
+* **NTFS** = Modern Windows file system.
+* **Journaling** = Helps recover from file system failures.
+* **NTFS permissions** = Control access to files and folders.
+* **EFS** = Provides file encryption.
+* **ADS** = Allows additional hidden data streams within NTFS files.
