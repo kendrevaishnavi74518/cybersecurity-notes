@@ -1,0 +1,79 @@
+# System Configuration (MSConfig)
+* **System Configuration (`MSConfig`)** is a Windows utility mainly used for **advanced troubleshooting and diagnosing startup problems**.
+* It requires **local Administrator rights** to open.
+* It can be launched from the **Start Menu** or by using `msconfig` in the Run dialog.
+
+## MSConfig Tabs
+
+### 1. General
+Controls which devices and services Windows loads during startup.
+
+Options:
+* **Normal startup** – Loads all configured devices and services.
+* **Diagnostic startup** – Loads only basic devices and services.
+* **Selective startup** – Allows specific startup items to be selected.
+
+### 2. Boot
+* Used to configure various **operating system boot options**.
+
+### 3. Services
+* Lists all services configured on the system, whether **running or stopped**.
+* A **service** is a special type of application that runs in the background.
+
+### 4. Startup
+* Used to view startup-related configuration.
+* In modern Windows, **Task Manager (`taskmgr`)** is used to enable or disable startup applications.
+* MSConfig is **not primarily a startup management tool**.
+
+**Windows Server Note:**
+* Windows Server may not show startup applications in Task Manager or MSConfig.
+* User-level startup items can be checked using:
+  `Win + R → shell:startup`
+* The Startup folder contains shortcuts/executables configured to run automatically when a user logs in.
+
+### 5. Tools
+
+* Contains various Windows utilities for further system configuration and troubleshooting.
+* Each tool has a description and a **Selected command**.
+* Tools can be launched using:
+
+  * **Launch** button
+  * Run dialog
+  * Command Prompt
+
+# Advanced System Settings
+
+* **Advanced System Settings** provides additional options for controlling **system performance and recovery**.
+* Search for **View advanced system settings** to open the **System Properties** window.
+
+## Page File
+
+* Windows uses a **page file** as additional virtual memory when physical RAM becomes full.
+* It helps reduce slowdowns and application crashes caused by insufficient RAM.
+* Page file settings can be accessed through:
+  **Advanced → Performance → Settings → Advanced**
+
+Information available includes:
+* Drive where the page file is stored
+* Initial size
+* Maximum size
+* Whether Windows manages the size automatically
+
+## Startup and Recovery
+
+* Windows can create a **crash dump file** when a critical system error occurs, such as a **Blue Screen of Death (BSOD)**.
+* Crash dumps help administrators and analysts determine what caused the crash.
+* Settings can be accessed through:
+  **Advanced → Startup and Recovery → Settings**
+
+### Crash Dump Types
+
+The **Write debugging information** option determines the type of crash dump created:
+* **Automatic memory dump**
+* **Kernel memory dump**
+* **Small memory dump (256 KB)**
+* **Complete memory dump**
+* **None**
+
+The selected option determines **how much information Windows saves when a system crash occurs**.
+
