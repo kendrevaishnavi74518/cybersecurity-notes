@@ -97,3 +97,61 @@ Each section also has a dedicated tab at the top for more detailed information.
   * File-locking conflicts
 * A **real-time graphical pane** on the right displays resource usage visually.
 
+# Windows Command Prompt (CMD)
+The **Command Prompt (CMD)** is a command-line interface that allows users to interact with Windows by entering commands instead of using the GUI.
+
+* In early operating systems, the command line was the primary way to interact with computers.
+* The **GUI** later made many tasks easier through graphical controls.
+* Command Prompt is still useful for **system information, networking, and troubleshooting**.
+
+## Important Commands
+
+| Command    | Purpose                                                             |
+| ---------- | ------------------------------------------------------------------- |
+| `hostname` | Displays the computer's name                                        |
+| `whoami`   | Displays the currently logged-in user                               |
+| `ipconfig` | Displays network configuration/address settings                     |
+| `cls`      | Clears the Command Prompt screen                                    |
+| `netstat`  | Displays network protocol statistics and current TCP/IP connections |
+| `net`      | Used to manage network resources                                    |
+
+## Command Help
+* Most commands provide a help manual using:
+  `/?`
+* Example:
+  `ipconfig /?`
+* The help manual shows:
+  * Correct command syntax
+  * Available parameters/options
+  * Additional functionality
+
+## `netstat`
+* Displays **protocol statistics** and current **TCP/IP network connections**.
+* It can be run alone or with parameters such as:
+  * `-a`
+  * `-b`
+  * `-e`
+* Adding parameters changes the information displayed.
+
+## `net` Command
+* The `net` command is mainly used to **manage network resources**.
+* It supports several subcommands, such as:
+  * `user`
+  * `localgroup`
+  * `use`
+  * `share`
+  * `session`
+
+### Getting `net` Help
+Unlike many commands, `net /?` is not used for its detailed help.
+
+Use:`net help`
+- For a specific subcommand: `net help user`
+
+Similarly, help can be viewed for other subcommands such as:
+- `net help localgroup`
+- `net help use`
+- `net help share`
+- `net help session`
+
+
