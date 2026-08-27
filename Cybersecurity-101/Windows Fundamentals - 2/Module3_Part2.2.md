@@ -52,3 +52,48 @@ or
 * It can be used to quickly find specific information.
 * For example:
   **Components → Search → `IP address`**
+
+# Resource Monitor (`resmon`)
+**Resource Monitor (`resmon`)** is a Windows utility used to monitor and troubleshoot **system resource usage**. It is mainly intended for advanced users.
+
+It provides detailed information about:
+* CPU usage
+* Memory usage
+* Disk activity
+* Network activity
+* Processes and services
+* File handles and modules used by processes
+
+## Overview Tab
+The **Overview** tab contains four main sections:
+1. **CPU**
+2. **Memory**
+3. **Disk**
+4. **Network**
+
+Each section also has a dedicated tab at the top for more detailed information.
+
+### CPU
+* Displays detailed **processor usage** by processes and services.
+* Helps identify processes consuming high CPU resources.
+
+### Memory
+* Shows **RAM usage** and memory-related information for running processes.
+* Helps identify applications using excessive memory.
+
+### Disk
+* Displays **disk activity** and which processes are accessing the disk.
+* Useful for identifying high disk usage.
+
+### Network
+* Shows **network activity** and processes using network resources.
+* Helps identify processes communicating over the network.
+
+## Additional Features
+* **Advanced filtering** allows users to isolate information related to specific processes.
+* Users can manage services and close unresponsive applications.
+* **Process analysis** can help identify:
+  * Deadlocked processes
+  * File-locking conflicts
+* A **real-time graphical pane** on the right displays resource usage visually.
+
