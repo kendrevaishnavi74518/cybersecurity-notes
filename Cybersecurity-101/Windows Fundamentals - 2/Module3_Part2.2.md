@@ -154,4 +154,25 @@ Similarly, help can be viewed for other subcommands such as:
 - `net help share`
 - `net help session`
 
+# Windows Registry
+The **Windows Registry** is a **central hierarchical database** used by Windows to store configuration and system information for users, applications, and hardware devices.
+
+## Information Stored in the Registry
+Windows continuously references registry information such as:
+* **User profiles**
+* **Installed applications** and the types of documents they can create
+* **Folder and application icon settings**
+* **Hardware information**
+* **Ports being used by the system**
+
+## Registry Editor
+* The **Registry Editor (`regedit`)** is used to **view and modify** the Windows Registry.
+* It provides access to the registry's hierarchical structure.
+
+## Warning
+* The Registry is intended for **advanced users**.
+* Incorrect registry modifications can cause **system instability or prevent normal Windows operations**.
+* Changes should be made carefully and only when the purpose of the modification is understood.
+
+
 
