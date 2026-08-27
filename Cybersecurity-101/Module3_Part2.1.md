@@ -87,3 +87,86 @@ The UAC settings can be changed or even turned off entirely (not recommended). Y
 - Notify without dimming: Same as above (Notify for apps), but this time the screen does not dim. 
 - Never notify: Notifications are turned off. Windows won’t warn you about any changes made by you or any apps. 
 
+# Computer Management (`compmgmt`)
+**Computer Management** is a Windows administrative utility with three primary sections:
+1. **System Tools**
+2. **Storage**
+3. **Services and Applications**
+
+## 1. System Tools
+### Task Scheduler
+* **Task Scheduler** allows users to create and manage tasks that Windows performs automatically.
+* Tasks can:
+  * Run applications or scripts
+  * Run at login or logout
+  * Run at a scheduled time, such as every 5 minutes
+  * Run once at a specific time
+* **Task Scheduler Library** displays existing scheduled tasks and their triggers/actions.
+* A basic task can be created using **Create Basic Task**.
+
+### Event Viewer
+* **Event Viewer** displays events that have occurred on the computer.
+* Event logs act as an **audit trail** for:
+  * Troubleshooting problems
+  * Investigating system activity
+  * Reviewing actions performed on the system
+* It has three main panes:
+  * **Left:** Event log hierarchy
+  * **Middle:** Event details/summary
+  * **Right:** Available actions
+* Standard logs are available under **Windows Logs**.
+
+### Shared Folders
+* Displays folders and resources shared over the network.
+* **Shares** shows available shared folders, including default administrative shares such as `C$` and `ADMIN$`.
+* **Sessions** shows users currently connected to shared resources.
+* **Open Files** shows files/folders currently being accessed by connected users.
+* Permissions can be viewed through the resource's properties.
+
+### Local Users and Groups
+* Provides management of local **users and groups**.
+* This is the same utility available through `lusrmgr.msc`.
+
+### Performance Monitor (`perfmon`)
+* **Performance Monitor** displays system performance data.
+* Data can be viewed:
+  * In real time
+  * From previously recorded log files
+* Useful for diagnosing performance problems on local or remote systems.
+
+### Device Manager
+* **Device Manager** allows users to view and configure hardware devices.
+* Hardware devices can be managed or disabled using this utility.
+
+## 2. Storage
+### Disk Management
+**Disk Management** is used for advanced storage configuration.
+Common tasks include:
+* Setting up a new drive
+* Extending a partition
+* Shrinking a partition
+* Assigning or changing a drive letter, such as `E:`
+
+**Note:** Windows Server may provide additional utilities that are not normally available in Windows client versions.
+
+## 3. Services and Applications
+### Services
+* A **service** is a special type of application that runs in the background.
+* The Services section displays services and their current status.
+* Right-clicking a service and selecting **Properties** provides details such as:
+  * Service name
+  * Executable path
+  * Startup type
+  * Other configuration details
+
+### Service Startup Types
+* **Automatic** – Service starts automatically when Windows boots.
+* **Manual** – Service starts when triggered by another process or user.
+* **Disabled** – Service is prevented from running.
+
+### WMI Control
+* **WMI (Windows Management Instrumentation)** allows scripting languages such as **VBScript** and **PowerShell** to manage Windows systems locally or remotely.
+* Microsoft also provided a command-line interface called **WMIC**.
+* **WMIC is deprecated** in Windows 10 version 21H1, with **PowerShell** being the preferred replacement for WMI management.
+
+
