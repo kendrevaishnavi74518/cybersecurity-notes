@@ -64,5 +64,36 @@ Use:
 ```cmd
 WF.msc
 ```
+# App & Browser Control
 
+**App & Browser Control** contains security features that protect Windows users from malicious or potentially unsafe applications, files, and websites.
+
+## Microsoft Defender SmartScreen
+
+**Microsoft Defender SmartScreen** helps protect against:
+
+* **Phishing websites**
+* **Malware websites and applications**
+* **Potentially malicious downloads**
+* Unrecognized applications and files downloaded from the Internet
+
+### SmartScreen Settings
+
+SmartScreen can be configured to:
+
+* **Warn** – Alerts the user about potentially unsafe content.
+* **Block** – Prevents the potentially unsafe content from running or being accessed.
+* **Off** – Disables SmartScreen protection.
+
+### Check Apps and Files
+
+* SmartScreen checks **unrecognized applications and files downloaded from the web**.
+* It helps prevent potentially dangerous files from being executed.
+
+## Exploit Protection
+
+* **Exploit Protection** is built into Windows 10 and Windows Server 2019.
+* It provides protection against **exploitation techniques and attacks** targeting applications and the operating system.
+
+> **Warning:** Unless you are completely confident about the changes, it is recommended to keep the **default security settings enabled**.
 
