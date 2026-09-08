@@ -61,6 +61,98 @@ driverquery | more
 | `driverquery`         | Displays installed device drivers                |
 | `driverquery \| more` | Displays driver information page by page         |
 
+# Network Configuration & Troubleshooting
+Command Prompt provides several commands for checking **network configuration, connectivity, DNS, routes, and active connections**.
+
+## 1. `ipconfig`
+* Displays the computer's basic **network configuration**.
+* Common information includes:
+  * IPv4 address
+  * IPv6 address
+  * Subnet mask
+  * Default gateway
+```cmd
+ipconfig
+```
+
+### `ipconfig /all`
+* Displays **detailed network configuration**, including:
+  * MAC/Physical address
+  * DHCP status
+  * DHCP server
+  * DNS servers
+  * IP addresses
+  * Default gateway
+  * DHCP lease information
+```cmd
+ipconfig /all
+```
+
+## 2. `ping`
+* Tests whether a target system can be **reached over the network**.
+* Sends **ICMP packets** to the target and waits for replies.
+* The output provides packet loss and round-trip time.
+
+```cmd
+ping example.com
+```
+Useful information:
+* Packets sent/received
+* Packet loss
+* Minimum, maximum, and average response time
+
+## 3. `tracert`
+
+* `tracert` stands for **Trace Route**.
+* Displays the network path taken to reach a destination.
+* Shows the routers/hops traversed between the source and target.
+* A `*` indicates that a response was not received from that hop.
+```cmd
+tracert example.com
+```
+
+## 4. `nslookup`
+* Used to perform **DNS lookups**.
+* Resolves a hostname/domain name to its IP address.
+* By default, it uses the system's configured DNS server.
+* A specific DNS server can also be specified.
+
+```cmd
+nslookup example.com
+```
+Using a specific DNS server:
+```cmd
+nslookup example.com 1.1.1.1
+```
+
+## 5. `netstat`
+* Displays **current network connections and listening ports**.
+* A basic command shows established connections.
+```cmd
+netstat
+```
+
+### Useful Options
+| Option | Purpose                                                |
+| ------ | ------------------------------------------------------ |
+| `-a`   | Displays all connections and listening ports           |
+| `-b`   | Shows the program associated with each connection/port |
+| `-o`   | Displays the Process ID (PID)                          |
+| `-n`   | Displays addresses and ports numerically               |
+| `-h`   | Displays the help page                                 |
+
+### Combined Command
+```cmd
+netstat -abon
+```
+This combines:
+* `-a` → All connections and listening ports
+* `-b` → Associated executable/program
+* `-o` → Process ID
+* `-n` → Numerical addresses and ports
+For example, `sshd.exe` may be shown listening on **port 22**, with its associated **PID**.
+
+
 
 
 
