@@ -1,26 +1,21 @@
-## File & Disk MAnagement
-s
+## File & Disk Management
 
-## Working with Directories
+#### Working with Directories
 
 ### `cd`
-
 * Displays the **current directory** when used without parameters.
 * Used to move to another directory.
-
 ```cmd
 cd
 cd target_directory
 ```
 
 * `cd ..` moves **one level up**.
-
 ```cmd
 cd ..
 ```
 
 ### `dir`
-
 * Displays files and subdirectories in the current directory.
 
 ```cmd
@@ -139,3 +134,44 @@ This copies **all `.md` files** to `C:\Markdown`.
 | `move`          | Move files                        |
 | `del` / `erase` | Delete files                      |
 | `*`             | Wildcard for multiple files       |
+
+### Task & Process Management
+* The `tasklist` command displays all **currently running processes** on a Windows system.
+* It provides information such as:
+
+  * Process name
+  * **PID (Process ID)**
+  * Session name
+  * Session number
+  * Memory usage
+
+```cmd
+tasklist
+```
+Since the output can be very long, filters can be used.
+
+## Filtering Processes
+Use `tasklist /?` to view available filters and command options.
+
+To find a specific process by its image name:
+```cmd
+tasklist /FI "imagename eq sshd.exe"
+```
+
+* `/FI` → Applies a filter.
+* `imagename eq` → Filters where the image name equals the specified process.
+* `sshd.exe` → Process being searched for.
+
+## `taskkill`
+* The `taskkill` command is used to **terminate a running process**.
+* A process can be terminated using its **PID**.
+```cmd
+taskkill /PID 4567
+```
+Here, `4567` is the PID of the process to terminate.
+
+### Extra Commands
+1. chkdsk: checks the file system and disk volumes for errors and bad sectors.
+2. driverquery: displays a list of installed device drivers.
+3. sfc /scannow: scans system files for corruption and repairs them if possible.
+-  It is equally important to know that /? can be used with most commands to display a help page.
