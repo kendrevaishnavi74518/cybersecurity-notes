@@ -44,3 +44,55 @@ In PowerShell, objects can represent:
 
 ### Key Point
 > **The main power of PowerShell comes from its object-oriented approach, which makes Windows administration, automation, and data manipulation more powerful and flexible.**
+
+## Launching PowerShell
+* PowerShell can be launched through:
+  * Start Menu
+  * `Win + R` → `powershell`
+  * File Explorer address bar
+  * Task Manager → Run new task
+  * Command Prompt → type `powershell`
+* The `PS` prompt indicates that PowerShell is running.
+
+## Verb-Noun Syntax
+* PowerShell commands are called **cmdlets**.
+* Cmdlets follow the **Verb-Noun** naming convention.
+* **Verb** = action, **Noun** = object.
+* Examples:
+
+  * `Get-Content` → retrieves file content.
+  * `Set-Location` → changes the current directory.
+
+## Important Cmdlets
+| Cmdlet           | Purpose                                        |
+| ---------------- | ---------------------------------------------- |
+| `Get-Command`    | Lists available commands                       |
+| `Get-Help`       | Provides help, syntax and examples for cmdlets |
+| `Get-Alias`      | Lists PowerShell command aliases               |
+| `Find-Module`    | Searches for modules in online repositories    |
+| `Install-Module` | Installs a PowerShell module                   |
+
+### Useful Examples
+```powershell
+Get-Command -CommandType "Function"
+Get-Help Get-Date
+Get-Help Get-Date -examples
+Get-Alias
+```
+
+## Aliases
+* **Aliases** are shortcuts/alternative names for cmdlets.
+* Examples:
+  * `dir` → `Get-ChildItem`
+  * `cd` → `Set-Location`
+  * `cat` → `Get-Content`
+  * `clear` → `Clear-Host`
+
+## Modules
+* **Modules** are collections of PowerShell cmdlets.
+* `Find-Module` searches online repositories such as **PowerShell Gallery**.
+* `Install-Module` downloads and installs a module.
+
+### Key Point
+> **PowerShell uses object-based cmdlets with a consistent Verb-Noun syntax, making system administration and automation easier.**
+
