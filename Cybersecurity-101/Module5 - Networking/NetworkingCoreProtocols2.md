@@ -91,4 +91,58 @@ FTP uses separate connections for:
 
 Therefore, the **directory listing** and the **downloaded file** are transferred over separate connections.
 
+### SMTP (Simple Mail Transfer Protocol)
+* **SMTP** defines how:
+  * A mail client communicates with a mail server.
+  * A mail server communicates with another mail server.
+* It is used for **sending/transferring email**.
+* **SMTP server default port:** TCP **25**
 
+### Common SMTP Commands
+| Command         | Purpose                                             |
+| --------------- | --------------------------------------------------- |
+| **HELO / EHLO** | Initiates an SMTP session                           |
+| **MAIL FROM**   | Specifies the sender's email address                |
+| **RCPT TO**     | Specifies the recipient's email address             |
+| **DATA**        | Indicates that the email content will follow        |
+| **`.`**         | On a line by itself, indicates the end of the email |
+| **QUIT**        | Closes the SMTP session                             |
+
+### SMTP Session Example
+Connect to an SMTP server using Telnet:
+```bash id="w8e2b6"
+telnet MACHINE_IP 25
+```
+
+Then the basic exchange is:
+```text id="p8xqk5"
+HELO client.thm
+MAIL FROM: <user@client.thm>
+RCPT TO: <strategos@server.thm>
+DATA
+From: user@client.thm
+To: strategos@server.thm
+Subject: Telnet email
+
+Hello. I am using telnet to send you an email!
+.
+QUIT
+```
+
+### Order to Remember
+```text
+HELO/EHLO
+    ↓
+MAIL FROM
+    ↓
+RCPT TO
+    ↓
+DATA
+    ↓
+Email content
+    ↓
+.
+    ↓
+QUIT
+```
+**Key line:** SMTP transfers email using a sequence of text-based commands between the client and mail server.
