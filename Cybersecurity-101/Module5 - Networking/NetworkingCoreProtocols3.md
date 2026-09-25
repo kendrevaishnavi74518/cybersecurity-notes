@@ -81,5 +81,4 @@ These tags allow the client to **match server responses with the corresponding c
 | **POP3**   | TCP       |      **110** |
 | **IMAP**   | TCP       |      **143** |
 
-### Easy Recall
-**21 FTP → 23 TELNET → 25 SMTP → 53 DNS → 80 HTTP → 110 POP3 → 143 IMAP → 443 HTTPS**
+
