@@ -119,3 +119,69 @@ After logging in:
 * Requires a proper **TLS certificate**.
 * Can be more difficult to configure through strict firewalls because FTP uses **separate control and data connections**.
 
+### VPN (Virtual Private Network)
+A **VPN** allows geographically separated offices or users to securely connect to a private network over the Internet.
+
+### Why VPN?
+The Internet's TCP/IP protocols focus mainly on delivering packets. They do not inherently guarantee that **all data entering or leaving a computer is protected from disclosure and alteration**.
+
+A VPN provides a **private and encrypted communication path** over the public Internet.
+
+### Basic Requirements
+A VPN generally requires:
+* **Internet connectivity**
+* **VPN server**
+* **VPN client**
+
+### How a VPN Works
+For a company with remote branches:
+```text
+Remote Branch
+VPN Client
+     │
+     │ Encrypted VPN Tunnel
+     ↓
+Internet
+     │
+     ↓
+VPN Server
+Main Branch
+```
+* The **VPN client encrypts traffic**.
+* The encrypted traffic travels through the **VPN tunnel**.
+* The VPN server receives and decrypts the traffic.
+* The decrypted traffic can then access resources on the private network.
+
+### VPN for Individual Users
+A VPN can also connect a **single device** to a private network.
+```text
+Laptop
+  ↓
+VPN Client
+  ↓
+Encrypted VPN Tunnel
+  ↓
+VPN Server
+  ↓
+Private Network
+```
+
+### VPN and Internet Traffic
+When configured to route all traffic through the VPN:
+* Internet traffic travels through the **VPN tunnel**.
+* Websites/services generally see the **VPN server's public IP**, rather than the user's original public IP.
+* The local ISP sees **encrypted VPN traffic** rather than the contents of the user's traffic.
+
+For example, connecting to a VPN server in **Japan** can make Internet services see the connection as coming from Japan and potentially provide Japan-specific content.
+
+### VPN Does Not Always Route All Traffic
+Not every VPN configuration sends all Internet traffic through the VPN.
+
+A VPN may instead:
+* Provide access only to a **private network**.
+* Allow normal Internet traffic to continue outside the VPN tunnel.
+
+Some VPN services may also **leak the user's actual IP address**.
+
+Depending on the purpose of the VPN, additional checks such as **DNS leak tests** may therefore be necessary.
+
